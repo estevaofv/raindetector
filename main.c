@@ -43,8 +43,9 @@ int main()
     // Inputs are on:
     //   PD2-7 (arduino digital pins 2-7)
     //   PC0-5 (arduino analog pins 0-5)
-    // Pins default to inputs with pull-ups disabled,
-    // so we don't need to do any special configuration
+    // Pins default to inputs, so we only need to enable pull-ups
+    PORTD = 0xFC;
+    PORTC = 0x3F;
 
     sei();
     for (;;)
